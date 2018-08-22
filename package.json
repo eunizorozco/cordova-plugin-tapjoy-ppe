@@ -1,27 +1,31 @@
 {
-  "name": "cordova-plugin-tapjoy-ppe",
-  "version": "0.1.0",
-  "description": "Tapjoy PPE plugin",
+  "name": "TapJoyPPE",
+  "version": "0.7.0",
+  "description": "https://github.com/eunizorozco/cordova-plugin-tapjoy-ppe.git",
   "cordova": {
-    "id": "cordova-plugin-tapjoy-ppe",
+    "id": "org.apache.cordova.plugin.TapJoyPPE",
     "platforms": [
-      "android"    ]
+      "android"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/don/cordova-plugin-tapjoy-ppe.git"
+    "url": "git+https://github.com/eunizorozco/cordova-plugin-tapjoy-ppe.git"
   },
   "keywords": [
-    "cordova",
-    "plugin",
-    "tapjoy-ppe",
     "ecosystem:cordova",
     "cordova-android"
   ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3"
+    }
+  ],
   "author": "Eunice Orozco",
-  "license": "Apache-2",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/don/cordova-plugin-tapjoy-ppe/issues"
+    "url": "https://github.com/eunizorozco/cordova-plugin-tapjoy-ppe/issues"
   },
-  "homepage": "https://github.com/don/cordova-plugin-tapjoy-ppe#readme"
+  "homepage": "https://github.com/eunizorozco/cordova-plugin-tapjoy-ppe#readme"
 }
