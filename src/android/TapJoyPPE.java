@@ -18,8 +18,6 @@ public class TapJoyPPE extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
-        super.pluginIntialize()
-
         Tapjoy.setDebugEnabled(true);
     }
 
