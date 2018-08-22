@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.eorozco.tapjoy"
+        id="org.apache.cordova.plugin"
         version="0.7.0">
 
   <name>TapJoyPPE</name>
@@ -19,10 +19,24 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="TapJoyPPE">
-        <param name="android-package" value="com.eorozco.plugin.TapJoyPPE"/>
+        <param name="android-package" value="org.apache.cordova.plugin.TapJoyPPE"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/TapJoyPPE.java" target-dir="src/com/eorozco/plugin/"/>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <activity android:configChanges="orientation|keyboardHidden|screenSize" android:hardwareAccelerated="true" android:name="com.tapjoy.TJContentActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+      <activity android:configChanges="orientation|keyboardHidden|screenSize" android:hardwareAccelerated="true" android:name="com.tapjoy.TJAdUnitActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+      <activity android:configChanges="orientation|keyboardHidden|screenSize" android:name="com.tapjoy.mraid.view.ActionHandler" />
+      <activity android:configChanges="orientation|keyboardHidden|screenSize" android:name="com.tapjoy.mraid.view.Browser" />
+    </config-file>
+
+    <source-file src="src/android/libs/tapjoyconnectlibrary.jar" target-dir="libs/" />
+    <source-file src="src/android/TapJoyPPE.java" target-dir="src/org/apache/cordova/plugin/"/>
   </platform>
 </plugin>
